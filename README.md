@@ -86,7 +86,7 @@ $`\min_{\pi \in \Pi} -H(\pi)\; \text{subject to } \rho(s,a)= \rho_{E}(s,a)\quad 
 ### Entropy-regularized apprenticeship learning
 Apprenticeship Learning via Inverse Reinforcement Learning(이하 APP)에서는 IRL문제를 다음과 같이 정의하였다.
 
-$\min_{\pi} \max_{c \in \mathcal{C}} \mathbb{E}_{\pi}[c(s,a)] - \mathbb{E}_{\pi_{E}}[c(s,a)]$
+$`\min_{\pi} \max_{c \in \mathcal{C}} \mathbb{E}_{\pi}[c(s,a)] - \mathbb{E}_{\pi_{E}}[c(s,a)]`$
 
 위 식의 안쪽 max 함수를 변형해보면,
 
@@ -114,4 +114,6 @@ $`\min_{\pi} - H(\pi) + \max_{c \in \mathcal{C}}\mathbb{E}_{\pi}[c(s,a)] - \math
 또한 모든 expert data에 대해 평균을 취하므로 Arbitrary expert datasets에 대한 어느정도의 조정이 가능할 것이다.
 
 여기서 Conjugate Function $`\psi^{\ast}_{GA}`$는 Jensen-Shannon Divergence $`D_{JS}`$의 정의로부터 아래와 같이 정리된다.
-
+<p align='left'>
+<img src='conjugate_function.png',  alt='fig2'>
+</p>
