@@ -71,7 +71,7 @@ $\min_{\pi \in \Pi} -H(\pi)\; \text{subject to } \rho(s,a)= \rho_{E}(s,a)\quad \
 ## Practical occupancy Measure Matching 
 위의 목차에서 유도한 최적화 문제는 다음과 같은 이유로 실용적이라고 보기 어려움
 - 제한된 수의 Expert Trajectories만이 제공됌
-- 아주 큰 환경에 대해서는 문제가 Intractable해진다. 가령 Constraint의 개수가 매우 많아진다.$\text{See) } \mathcal{S, A}$
+- 아주 큰 환경에 대해서는 문제가 Intractable해진다. 가령 Constraint의 개수가 매우 많아진다.$`\text{See) } \mathcal{S, A}`$
 
 문제를 Large Environment에 적합하게 만들기 위해 위에서 유도한 문제를 relax 해보자
 
