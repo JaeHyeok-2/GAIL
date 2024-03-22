@@ -32,10 +32,10 @@ IRL은 결과적으로 expert policy가 다른 모든 policy들보다 낮은 cos
 $`IRL_\psi = arg \max_{c \in \mathbb{R}^{S \times A}} -\psi(c) + (\min_{\pi \in \Pi} -H(\pi) + \mathbb{E}_{\pi}[c(s,a)])- \mathbb{E}_{\pi_{E}}[c(s,a)],`$
 where $\psi$ is a cost regularizer.
 
-여기서 관심있어 봐야할 부분은 RL($\tilde{c}$)로 얻어지는 policy다. ($\tilde{c}$는 IRL의 결과)
-Policy $\pi$에 대한 occupancy measure($\rho$)가 $rho_{\pi} : \mathcal{S \times A} \rightarrow \mathbb{R}\; \mathbf{as\; \rho_{\pi}(s,a = \pi(a|s) \sum^{\infty}_{t=1} \gamma^t P(s_t = s |\pi))} $이고,
+여기서 관심있어 봐야할 부분은 RL($`\tilde{c}`$)로 얻어지는 policy다. ($`\tilde{c}`$는 IRL의 결과)
+Policy $`\pi$에 대한 occupancy measure($\rho$)가 $rho_{\pi} : \mathcal{S \times A} \rightarrow \mathbb{R}\; \mathbf{as\; \rho_{\pi}(s,a = \pi(a|s) \sum^{\infty}_{t=1} \gamma^t P(s_t = s |\pi))}`$이고,
 
-이고, 임의의 cost function $c$에 대해서 $\mathbb{E}_\pi[c(s,a)] = \sum_{s,a}\rho_\pi(s,a)c(s,a)$일 때, 이를 RL과 IRL의 합성함수로 나타내어 보자.
+이고, 임의의 cost function $c$에 대해서 $`\mathbb{E}_\pi[c(s,a)] = \sum_{s,a}\rho_\pi(s,a)c(s,a)`$일 때, 이를 RL과 IRL의 합성함수로 나타내어 보자.
 
 
 $`RL \circ IRL_\psi (\pi_E)  = arg\min_{\pi \in \Pi} \: \max_{c \in \mathbb{R}^{S \times A}} - H(\pi) + \mathbb{E}_{\pi}[c(s,a)] - \mathbb{E}_{\pi_E}[c(s,a)] -\psi(c)`$
